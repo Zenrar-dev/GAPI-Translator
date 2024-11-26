@@ -10,37 +10,13 @@ namespace Translator
             comboBox1.SelectedItem = "Английский";
             cb = new ComboBox();
             cb.Items.AddRange(new object[] {
-                "Арабский язык",
-                "Болгарский",
-                "Чешский",
-                "Датский",
-                "Немецкий",
-                "Греческий",
-                "Английский",
-                "Испанский",
-                "Эстонский",
-                "Финский",
-                "Французский",
-                "Венгерский",
-                "Индонезийский",
-                "Итальянский",
-                "Японский",
-                "Корейский",
-                "Литовский",
-                "Латышский",
-                "Норвежский Бокмол",
-                "Голландский",
-                "Польский",
-                "Португальский",
-                "Румынский",
-                "Русский",
-                "Словацкий",
-                "Словенский",
-                "Шведский",
-                "Турецкий",
-                "Украинский",
-                "Китайский" });
-
+                "Английский", 
+                "Русский", 
+                "Французский", 
+                "Немецкий", 
+                "Испанский", 
+                "Итальянский", 
+                "Португальский" });
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -55,22 +31,22 @@ namespace Translator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            comboBox2.SelectedItem = "Русский";
+            comboBox1.SelectedItem = "Русский";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            comboBox2.SelectedItem = "Английский";
+            comboBox1.SelectedItem = "Английский";
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            comboBox1.SelectedItem = "Немецкий";
+            comboBox2.SelectedItem = "Немецкий";
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            comboBox1.SelectedItem = "Испанский";
+            comboBox2.SelectedItem = "Испанский";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,6 +55,23 @@ namespace Translator
             comboBox1.SelectedItem = comboBox2.SelectedItem;
             comboBox2.SelectedItem = cb.SelectedItem;
 
+
+        }
+
+        private async void button2_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Clear();
+            string translatedText = await GoogleTranslate.TranslateAsync(comboBox1.SelectedItem.ToString(), comboBox2.SelectedItem.ToString(), richTextBox1.Text);
+            richTextBox2.Text = translatedText;
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
