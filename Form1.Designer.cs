@@ -47,13 +47,14 @@
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             richTextBox2 = new RichTextBox();
+            toolStripSeparator1 = new ToolStripSeparator();
             menuStrip1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { справкаToolStripMenuItem, файлToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem, справкаToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(912, 24);
@@ -71,12 +72,12 @@
             // оПрограммеToolStripMenuItem
             // 
             оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            оПрограммеToolStripMenuItem.Size = new Size(149, 22);
+            оПрограммеToolStripMenuItem.Size = new Size(180, 22);
             оПрограммеToolStripMenuItem.Text = "О программе";
             // 
             // файлToolStripMenuItem
             // 
-            файлToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { выходToolStripMenuItem1 });
+            файлToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripSeparator1, выходToolStripMenuItem1 });
             файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             файлToolStripMenuItem.Size = new Size(48, 20);
             файлToolStripMenuItem.Text = "Файл";
@@ -84,8 +85,9 @@
             // выходToolStripMenuItem1
             // 
             выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
-            выходToolStripMenuItem1.Size = new Size(109, 22);
+            выходToolStripMenuItem1.Size = new Size(180, 22);
             выходToolStripMenuItem1.Text = "Выход";
+            выходToolStripMenuItem1.Click += выходToolStripMenuItem1_Click;
             // 
             // contextMenuStrip1
             // 
@@ -202,6 +204,11 @@
             richTextBox2.Text = "";
             richTextBox2.TextChanged += richTextBox1_TextChanged;
             // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(177, 6);
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -249,5 +256,6 @@
         private ComboBox comboBox2;
         private ComboBox comboBox1;
         private RichTextBox richTextBox2;
+        private ToolStripSeparator toolStripSeparator1;
     }
 }

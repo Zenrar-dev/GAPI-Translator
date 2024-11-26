@@ -10,12 +10,12 @@ namespace Translator
             comboBox1.SelectedItem = "Английский";
             cb = new ComboBox();
             cb.Items.AddRange(new object[] {
-                "Английский", 
-                "Русский", 
-                "Французский", 
-                "Немецкий", 
-                "Испанский", 
-                "Итальянский", 
+                "Английский",
+                "Русский",
+                "Французский",
+                "Немецкий",
+                "Испанский",
+                "Итальянский",
                 "Португальский" });
         }
 
@@ -73,6 +73,11 @@ namespace Translator
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void выходToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
