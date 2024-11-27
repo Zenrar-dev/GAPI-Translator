@@ -68,7 +68,7 @@ namespace Translator
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Ошибка! Отсутствует инетернет-соединение.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message,"Ошибка! Отсутствует интернет-соединение.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
