@@ -115,17 +115,6 @@ namespace GAPITranslator
                 "яванский",
                 "японский" });
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             comboBox1.SelectedItem = "–усский";
@@ -151,8 +140,6 @@ namespace GAPITranslator
             cb.SelectedItem = comboBox1.SelectedItem;
             comboBox1.SelectedItem = comboBox2.SelectedItem;
             comboBox2.SelectedItem = cb.SelectedItem;
-
-
         }
 
         private async void button2_Click(object sender, EventArgs e)
@@ -168,17 +155,6 @@ namespace GAPITranslator
                 MessageBox.Show(ex.Message, "ќшибка! ќтсутствует интернет-соединение.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void выходToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
