@@ -31,10 +31,11 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             menuStrip1 = new MenuStrip();
+            файлToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
+            выходToolStripMenuItem1 = new ToolStripMenuItem();
             справкаToolStripMenuItem = new ToolStripMenuItem();
             оПрограммеToolStripMenuItem = new ToolStripMenuItem();
-            файлToolStripMenuItem = new ToolStripMenuItem();
-            выходToolStripMenuItem1 = new ToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
             выходToolStripMenuItem = new ToolStripMenuItem();
             richTextBox1 = new RichTextBox();
@@ -47,7 +48,6 @@
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             richTextBox2 = new RichTextBox();
-            toolStripSeparator1 = new ToolStripSeparator();
             menuStrip1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
@@ -62,6 +62,25 @@
             menuStrip1.Text = "menuStrip1";
             menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
+            // файлToolStripMenuItem
+            // 
+            файлToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripSeparator1, выходToolStripMenuItem1 });
+            файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            файлToolStripMenuItem.Size = new Size(48, 20);
+            файлToolStripMenuItem.Text = "Файл";
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(106, 6);
+            // 
+            // выходToolStripMenuItem1
+            // 
+            выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
+            выходToolStripMenuItem1.Size = new Size(109, 22);
+            выходToolStripMenuItem1.Text = "Выход";
+            выходToolStripMenuItem1.Click += выходToolStripMenuItem1_Click;
+            // 
             // справкаToolStripMenuItem
             // 
             справкаToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { оПрограммеToolStripMenuItem });
@@ -72,22 +91,8 @@
             // оПрограммеToolStripMenuItem
             // 
             оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            оПрограммеToolStripMenuItem.Size = new Size(180, 22);
+            оПрограммеToolStripMenuItem.Size = new Size(149, 22);
             оПрограммеToolStripMenuItem.Text = "О программе";
-            // 
-            // файлToolStripMenuItem
-            // 
-            файлToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripSeparator1, выходToolStripMenuItem1 });
-            файлToolStripMenuItem.Name = "файлToolStripMenuItem";
-            файлToolStripMenuItem.Size = new Size(48, 20);
-            файлToolStripMenuItem.Text = "Файл";
-            // 
-            // выходToolStripMenuItem1
-            // 
-            выходToolStripMenuItem1.Name = "выходToolStripMenuItem1";
-            выходToolStripMenuItem1.Size = new Size(180, 22);
-            выходToolStripMenuItem1.Text = "Выход";
-            выходToolStripMenuItem1.Click += выходToolStripMenuItem1_Click;
             // 
             // contextMenuStrip1
             // 
@@ -204,15 +209,11 @@
             richTextBox2.Text = "";
             richTextBox2.TextChanged += richTextBox1_TextChanged;
             // 
-            // toolStripSeparator1
-            // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(912, 395);
             Controls.Add(richTextBox2);
             Controls.Add(comboBox1);

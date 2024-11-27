@@ -60,9 +60,16 @@ namespace Translator
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            richTextBox2.Clear();
-            string translatedText = await GoogleTranslate.TranslateAsync(comboBox1.SelectedItem.ToString(), comboBox2.SelectedItem.ToString(), richTextBox1.Text);
-            richTextBox2.Text = translatedText;
+            try 
+            { 
+                richTextBox2.Clear();
+                string translatedText = await GoogleTranslate.TranslateAsync(comboBox1.SelectedItem.ToString(), comboBox2.SelectedItem.ToString(), richTextBox1.Text);
+                richTextBox2.Text = translatedText;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Ошибка! Отсутствует инетернет-соединение.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
