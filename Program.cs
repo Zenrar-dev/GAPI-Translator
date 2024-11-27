@@ -1,4 +1,4 @@
-namespace Translator
+namespace GAPITranslator
 {
     internal static class Program
     {

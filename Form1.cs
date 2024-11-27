@@ -1,4 +1,4 @@
-namespace Translator
+namespace GAPITranslator
 {
     public partial class Form1 : Form
     {
@@ -157,15 +157,15 @@ namespace Translator
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            try 
-            { 
+            try
+            {
                 richTextBox2.Clear();
                 string translatedText = await GoogleTranslate.TranslateAsync(comboBox1.SelectedItem.ToString(), comboBox2.SelectedItem.ToString(), richTextBox1.Text);
                 richTextBox2.Text = translatedText;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Ошибка! Отсутствует интернет-соединение.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Ошибка! Отсутствует интернет-соединение.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -182,6 +182,11 @@ namespace Translator
         private void выходToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("GAPI-Translator v1.0\nСоздано на основе: https://translate.google.ru", "О программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
