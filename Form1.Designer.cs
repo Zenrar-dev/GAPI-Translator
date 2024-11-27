@@ -92,12 +92,12 @@
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(146, 6);
             // 
             // оПрограммеToolStripMenuItem
             // 
             оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            оПрограммеToolStripMenuItem.Size = new Size(180, 22);
+            оПрограммеToolStripMenuItem.Size = new Size(149, 22);
             оПрограммеToolStripMenuItem.Text = "О программе";
             оПрограммеToolStripMenuItem.Click += оПрограммеToolStripMenuItem_Click;
             // 
@@ -115,7 +115,8 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(11, 82);
+            richTextBox1.BackColor = Color.LightBlue;
+            richTextBox1.Location = new Point(12, 70);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(414, 131);
             richTextBox1.TabIndex = 3;
@@ -125,7 +126,7 @@
             // 
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Zoom;
-            button1.Location = new Point(432, 88);
+            button1.Location = new Point(432, 70);
             button1.Name = "button1";
             button1.Size = new Size(52, 39);
             button1.TabIndex = 4;
@@ -134,7 +135,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(819, 222);
+            button2.Location = new Point(819, 207);
             button2.Name = "button2";
             button2.Size = new Size(85, 29);
             button2.TabIndex = 5;
@@ -145,7 +146,7 @@
             // button3
             // 
             button3.FlatStyle = FlatStyle.Popup;
-            button3.Location = new Point(12, 45);
+            button3.Location = new Point(105, 27);
             button3.Name = "button3";
             button3.Size = new Size(87, 34);
             button3.TabIndex = 6;
@@ -156,7 +157,7 @@
             // button4
             // 
             button4.FlatStyle = FlatStyle.Popup;
-            button4.Location = new Point(105, 45);
+            button4.Location = new Point(12, 27);
             button4.Name = "button4";
             button4.Size = new Size(87, 34);
             button4.TabIndex = 7;
@@ -167,7 +168,7 @@
             // button5
             // 
             button5.FlatStyle = FlatStyle.Popup;
-            button5.Location = new Point(490, 48);
+            button5.Location = new Point(490, 30);
             button5.Name = "button5";
             button5.Size = new Size(85, 34);
             button5.TabIndex = 8;
@@ -178,7 +179,7 @@
             // button6
             // 
             button6.FlatStyle = FlatStyle.Popup;
-            button6.Location = new Point(581, 48);
+            button6.Location = new Point(581, 30);
             button6.Name = "button6";
             button6.Size = new Size(85, 34);
             button6.TabIndex = 9;
@@ -191,7 +192,7 @@
             comboBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Азербайджанский", "Албанский", "Амхарский", "Английский", "Арабский", "Армянский", "Африкаанс", "Баскский", "Белорусский", "Бенгальский", "Болгарский", "Боснийский", "Валлийский", "Венгерский", "Вьетнамский", "Гаитянский креольский", "Галисийский", "Голландский", "Греческий", "Грузинский", "Гуджарати", "Датский", "Зулу", "Иврит", "Игбо", "Идиш", "Индонезийский", "Ирландский", "Исландский", "Испанский", "Итальянский", "Йоруба", "Казах", "Каннада", "Каталанский", "Киньяруанда", "Киргиз", "Корейский", "Корсиканский", "Курдский", "Кхмерский", "Лаосский", "Латинский", "Латышский", "Литовский", "Люксембургский", "Македонский", "Малагасийский", "Малайский", "Малаялам", "Мальтийский", "Маори", "Маратхи", "Монгольский", "Мьянманский (бирманский)", "Немецкий", "Непальский", "Норвежский", "Ньянджа (чичева)", "Одия (Ория)", "Панджаби", "Персидский", "Польский", "Португальский", "Пушту", "Румынский", "Русский", "Самоанский", "Сербский", "Сесото", "Сингальский", "Синдхи", "Словацкий", "Словенский", "Сомалийский", "Суахили", "Сунданский", "Тагальский", "Таджикский", "Тайский", "Тамильский", "Татарин", "Телугу", "Турецкий", "Туркменский", "Узбекский", "Уйгурский", "Украинский", "Урду", "Финский", "Французский", "Фризский", "Хауса", "Хинди", "Хорватский", "Хоса", "Чешский", "Шведский", "Шона", "Шотландский гэльский", "Эсперанто", "Эстонский", "Яванский", "Японский" });
-            comboBox2.Location = new Point(672, 51);
+            comboBox2.Location = new Point(672, 33);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(232, 28);
             comboBox2.TabIndex = 11;
@@ -202,14 +203,15 @@
             comboBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Азербайджанский", "Албанский", "Амхарский", "Английский", "Арабский", "Армянский", "Африкаанс", "Баскский", "Белорусский", "Бенгальский", "Болгарский", "Боснийский", "Валлийский", "Венгерский", "Вьетнамский", "Гаитянский креольский", "Галисийский", "Голландский", "Греческий", "Грузинский", "Гуджарати", "Датский", "Зулу", "Иврит", "Игбо", "Идиш", "Индонезийский", "Ирландский", "Исландский", "Испанский", "Итальянский", "Йоруба", "Казах", "Каннада", "Каталанский", "Киньяруанда", "Киргиз", "Корейский", "Корсиканский", "Курдский", "Кхмерский", "Лаосский", "Латинский", "Латышский", "Литовский", "Люксембургский", "Македонский", "Малагасийский", "Малайский", "Малаялам", "Мальтийский", "Маори", "Маратхи", "Монгольский", "Мьянманский (бирманский)", "Немецкий", "Непальский", "Норвежский", "Ньянджа (чичева)", "Одия (Ория)", "Панджаби", "Персидский", "Польский", "Португальский", "Пушту", "Румынский", "Русский", "Самоанский", "Сербский", "Сесото", "Сингальский", "Синдхи", "Словацкий", "Словенский", "Сомалийский", "Суахили", "Сунданский", "Тагальский", "Таджикский", "Тайский", "Тамильский", "Татарин", "Телугу", "Турецкий", "Туркменский", "Узбекский", "Уйгурский", "Украинский", "Урду", "Финский", "Французский", "Фризский", "Хауса", "Хинди", "Хорватский", "Хоса", "Чешский", "Шведский", "Шона", "Шотландский гэльский", "Эсперанто", "Эстонский", "Яванский", "Японский" });
-            comboBox1.Location = new Point(198, 48);
+            comboBox1.Location = new Point(198, 30);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(227, 28);
             comboBox1.TabIndex = 12;
             // 
             // richTextBox2
             // 
-            richTextBox2.Location = new Point(490, 85);
+            richTextBox2.BackColor = Color.LightBlue;
+            richTextBox2.Location = new Point(490, 70);
             richTextBox2.Name = "richTextBox2";
             richTextBox2.Size = new Size(414, 131);
             richTextBox2.TabIndex = 13;
@@ -221,6 +223,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(912, 395);
             Controls.Add(richTextBox2);
             Controls.Add(comboBox1);
@@ -233,8 +236,10 @@
             Controls.Add(button1);
             Controls.Add(richTextBox1);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
             Name = "Form1";
             Text = "GAPI-Translator";
             Load += Form1_Load;
