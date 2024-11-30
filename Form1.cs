@@ -123,6 +123,7 @@ namespace GAPITranslator
             richTextBox1.Paint += RichTextBox1_Paint;
         }
 
+
         private void RichTextBox1_Enter(object sender, EventArgs e)
         {
             if (richTextBox1.Text == "¬ведите текст дл€ перевода...")
@@ -161,6 +162,7 @@ namespace GAPITranslator
                 }
             }
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             comboBox1.SelectedItem = "–усский";
