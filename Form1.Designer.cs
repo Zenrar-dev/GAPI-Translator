@@ -55,13 +55,13 @@
             // 
             // menuStrip1
             // 
+            menuStrip1.BackColor = Color.LightBlue;
             menuStrip1.Items.AddRange(new ToolStripItem[] { файлToolStripMenuItem, справкаToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(912, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
-            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // файлToolStripMenuItem
             // 
@@ -196,7 +196,6 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(232, 28);
             comboBox2.TabIndex = 11;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // comboBox1
             // 
@@ -216,7 +215,6 @@
             richTextBox2.Size = new Size(414, 131);
             richTextBox2.TabIndex = 13;
             richTextBox2.Text = "";
-            richTextBox2.TextChanged += richTextBox1_TextChanged;
             // 
             // Form1
             // 
@@ -242,7 +240,6 @@
             MaximizeBox = false;
             Name = "Form1";
             Text = "GAPI-Translator";
-            Load += Form1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             contextMenuStrip1.ResumeLayout(false);

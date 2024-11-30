@@ -114,18 +114,53 @@ namespace GAPITranslator
                 "Ёстонский",
                 "яванский",
                 "японский" });
+            richTextBox1.Text = string.Empty; 
+            richTextBox1.ForeColor = Color.Black; 
+            richTextBox1.Font = new Font("Segoe UI", 12); 
+            richTextBox1.Enter += RichTextBox1_Enter;
+            richTextBox1.Leave += RichTextBox1_Leave;
+            richTextBox1.TextChanged += RichTextBox1_TextChanged;
+            richTextBox1.Paint += RichTextBox1_Paint;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void RichTextBox1_Enter(object sender, EventArgs e)
         {
-
+            if (richTextBox1.Text == "¬ведите текст дл€ перевода...")
+            {
+                richTextBox1.Text = "";
+                richTextBox1.ForeColor = Color.Black; 
+            }
         }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void RichTextBox1_Leave(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(richTextBox1.Text))
+            {
+                richTextBox1.Text = "¬ведите текст дл€ перевода...";
+                richTextBox1.ForeColor = Color.Gray; 
+            }
         }
-
+        private void RichTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(richTextBox1.Text))
+            {
+                richTextBox1.ForeColor = Color.Black;
+            }
+            else
+            {
+                richTextBox1.ForeColor = Color.Gray;
+            }
+        }
+        private void RichTextBox1_Paint(object sender, PaintEventArgs e)
+        {
+            if (string.IsNullOrEmpty(richTextBox1.Text))
+            {
+                using (Font font = new Font("Segoe UI", 12))
+                using (Brush brush = new SolidBrush(Color.FromArgb(128, 169, 169, 169))) 
+                {
+                    e.Graphics.DrawString("¬ведите текст дл€ перевода...", font, brush, new Point(5, 5));
+                }
+            }
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             comboBox1.SelectedItem = "–усский";
@@ -151,8 +186,6 @@ namespace GAPITranslator
             cb.SelectedItem = comboBox1.SelectedItem;
             comboBox1.SelectedItem = comboBox2.SelectedItem;
             comboBox2.SelectedItem = cb.SelectedItem;
-
-
         }
 
         private async void button2_Click(object sender, EventArgs e)
@@ -168,17 +201,6 @@ namespace GAPITranslator
                 MessageBox.Show(ex.Message, "ќшибка! ќтсутствует интернет-соединение.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void выходToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Application.Exit();
