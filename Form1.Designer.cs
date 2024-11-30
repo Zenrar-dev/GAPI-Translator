@@ -121,6 +121,7 @@
             richTextBox1.Size = new Size(414, 131);
             richTextBox1.TabIndex = 3;
             richTextBox1.Text = "";
+            richTextBox1.KeyDown += richTextBox1_KeyDown;
             // 
             // button1
             // 
@@ -210,6 +211,7 @@
             // richTextBox2
             // 
             richTextBox2.BackColor = Color.LightBlue;
+            richTextBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             richTextBox2.Location = new Point(490, 70);
             richTextBox2.Name = "richTextBox2";
             richTextBox2.Size = new Size(414, 131);
