@@ -228,6 +228,30 @@ namespace GAPITranslator
                 }
             }
         }
+        private void âûğåçàòüToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Cut();
+        }
+        private void êîïèğîâàòüToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Copy();
+        }
+        private void âñòàâèòüToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Paste();
+        }
+        private void âûáğàòüÂñ¸ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectAll();
+        }
+        private void êîïèğîâàòüToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Copy();
+        }
+        private void âûáğàòüÂñ¸ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            richTextBox2.SelectAll();
+        }
     }
 }
 

@@ -38,7 +38,10 @@
             toolStripSeparator2 = new ToolStripSeparator();
             оПрограммеToolStripMenuItem = new ToolStripMenuItem();
             contextMenuStrip1 = new ContextMenuStrip(components);
-            выходToolStripMenuItem = new ToolStripMenuItem();
+            копироватьToolStripMenuItem = new ToolStripMenuItem();
+            вырезатьToolStripMenuItem = new ToolStripMenuItem();
+            вставитьToolStripMenuItem = new ToolStripMenuItem();
+            выбратьВсёToolStripMenuItem = new ToolStripMenuItem();
             richTextBox1 = new RichTextBox();
             button1 = new Button();
             button2 = new Button();
@@ -49,8 +52,12 @@
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             richTextBox2 = new RichTextBox();
+            contextMenuStrip2 = new ContextMenuStrip(components);
+            копироватьToolStripMenuItem1 = new ToolStripMenuItem();
+            выбратьВсёToolStripMenuItem1 = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
+            contextMenuStrip2.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -103,19 +110,42 @@
             // 
             // contextMenuStrip1
             // 
-            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { выходToolStripMenuItem });
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { копироватьToolStripMenuItem, вырезатьToolStripMenuItem, вставитьToolStripMenuItem, выбратьВсёToolStripMenuItem });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(110, 26);
+            contextMenuStrip1.Size = new Size(143, 92);
             // 
-            // выходToolStripMenuItem
+            // копироватьToolStripMenuItem
             // 
-            выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            выходToolStripMenuItem.Size = new Size(109, 22);
-            выходToolStripMenuItem.Text = "Выход";
+            копироватьToolStripMenuItem.Name = "копироватьToolStripMenuItem";
+            копироватьToolStripMenuItem.Size = new Size(142, 22);
+            копироватьToolStripMenuItem.Text = "Копировать";
+            копироватьToolStripMenuItem.Click += копироватьToolStripMenuItem_Click;
+            // 
+            // вырезатьToolStripMenuItem
+            // 
+            вырезатьToolStripMenuItem.Name = "вырезатьToolStripMenuItem";
+            вырезатьToolStripMenuItem.Size = new Size(142, 22);
+            вырезатьToolStripMenuItem.Text = "Вырезать";
+            вырезатьToolStripMenuItem.Click += вырезатьToolStripMenuItem_Click;
+            // 
+            // вставитьToolStripMenuItem
+            // 
+            вставитьToolStripMenuItem.Name = "вставитьToolStripMenuItem";
+            вставитьToolStripMenuItem.Size = new Size(142, 22);
+            вставитьToolStripMenuItem.Text = "Вставить";
+            вставитьToolStripMenuItem.Click += вставитьToolStripMenuItem_Click;
+            // 
+            // выбратьВсёToolStripMenuItem
+            // 
+            выбратьВсёToolStripMenuItem.Name = "выбратьВсёToolStripMenuItem";
+            выбратьВсёToolStripMenuItem.Size = new Size(142, 22);
+            выбратьВсёToolStripMenuItem.Text = "Выбрать всё";
+            выбратьВсёToolStripMenuItem.Click += выбратьВсёToolStripMenuItem_Click;
             // 
             // richTextBox1
             // 
             richTextBox1.BackColor = Color.LightBlue;
+            richTextBox1.ContextMenuStrip = contextMenuStrip1;
             richTextBox1.Location = new Point(12, 70);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(414, 131);
@@ -211,6 +241,7 @@
             // richTextBox2
             // 
             richTextBox2.BackColor = Color.LightBlue;
+            richTextBox2.ContextMenuStrip = contextMenuStrip2;
             richTextBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             richTextBox2.Location = new Point(490, 70);
             richTextBox2.Name = "richTextBox2";
@@ -219,6 +250,26 @@
             richTextBox2.TabIndex = 13;
             richTextBox2.TabStop = false;
             richTextBox2.Text = "";
+            // 
+            // contextMenuStrip2
+            // 
+            contextMenuStrip2.Items.AddRange(new ToolStripItem[] { копироватьToolStripMenuItem1, выбратьВсёToolStripMenuItem1 });
+            contextMenuStrip2.Name = "contextMenuStrip2";
+            contextMenuStrip2.Size = new Size(143, 48);
+            // 
+            // копироватьToolStripMenuItem1
+            // 
+            копироватьToolStripMenuItem1.Name = "копироватьToolStripMenuItem1";
+            копироватьToolStripMenuItem1.Size = new Size(142, 22);
+            копироватьToolStripMenuItem1.Text = "Копировать";
+            копироватьToolStripMenuItem1.Click += копироватьToolStripMenuItem1_Click;
+            // 
+            // выбратьВсёToolStripMenuItem1
+            // 
+            выбратьВсёToolStripMenuItem1.Name = "выбратьВсёToolStripMenuItem1";
+            выбратьВсёToolStripMenuItem1.Size = new Size(142, 22);
+            выбратьВсёToolStripMenuItem1.Text = "Выбрать всё";
+            выбратьВсёToolStripMenuItem1.Click += выбратьВсёToolStripMenuItem1_Click;
             // 
             // Form1
             // 
@@ -247,6 +298,7 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             contextMenuStrip1.ResumeLayout(false);
+            contextMenuStrip2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -257,7 +309,6 @@
         private ToolStripMenuItem файлToolStripMenuItem;
         private ToolStripMenuItem выходToolStripMenuItem1;
         private ContextMenuStrip contextMenuStrip1;
-        private ToolStripMenuItem выходToolStripMenuItem;
         private ToolStripMenuItem справкаToolStripMenuItem;
         private ToolStripMenuItem оПрограммеToolStripMenuItem;
         private RichTextBox richTextBox1;
@@ -272,5 +323,12 @@
         private RichTextBox richTextBox2;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripSeparator toolStripSeparator2;
+        private ToolStripMenuItem вырезатьToolStripMenuItem;
+        private ToolStripMenuItem копироватьToolStripMenuItem;
+        private ToolStripMenuItem вставитьToolStripMenuItem;
+        private ToolStripMenuItem выбратьВсёToolStripMenuItem;
+        private ContextMenuStrip contextMenuStrip2;
+        private ToolStripMenuItem копироватьToolStripMenuItem1;
+        private ToolStripMenuItem выбратьВсёToolStripMenuItem1;
     }
 }
