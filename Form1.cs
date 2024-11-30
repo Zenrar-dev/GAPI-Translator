@@ -117,8 +117,8 @@ namespace GAPITranslator
                 "яванский",
                 "японский" });
             richTextBox1.Text = string.Empty;
-            richTextBox1.ForeColor = Color.Black; 
-            richTextBox1.Font = new Font("Segoe UI", 12); 
+            richTextBox1.ForeColor = Color.Black;
+            richTextBox1.Font = new Font("Segoe UI", 12);
             richTextBox1.Enter += RichTextBox1_Enter;
             richTextBox1.Leave += RichTextBox1_Leave;
             richTextBox1.TextChanged += RichTextBox1_TextChanged;
@@ -228,7 +228,6 @@ namespace GAPITranslator
                 }
             }
         }
-
     }
 }
 

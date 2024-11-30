@@ -214,8 +214,10 @@
             richTextBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             richTextBox2.Location = new Point(490, 70);
             richTextBox2.Name = "richTextBox2";
+            richTextBox2.ReadOnly = true;
             richTextBox2.Size = new Size(414, 131);
             richTextBox2.TabIndex = 13;
+            richTextBox2.TabStop = false;
             richTextBox2.Text = "";
             // 
             // Form1
