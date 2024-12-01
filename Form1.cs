@@ -116,13 +116,15 @@ namespace GAPITranslator
                 "Ёстонский",
                 "яванский",
                 "японский" });
-            richTextBox1.Text = string.Empty;
+            richTextBox1.Text = "";
             richTextBox1.ForeColor = Color.Black;
             richTextBox1.Font = new Font("Segoe UI", 12);
             richTextBox1.Enter += RichTextBox1_Enter;
             richTextBox1.Leave += RichTextBox1_Leave;
             richTextBox1.TextChanged += RichTextBox1_TextChanged;
             richTextBox1.Paint += RichTextBox1_Paint;
+            richTextBox1.SelectionRightIndent = 65;
+            richTextBox2.SelectionRightIndent = 65;
         }
         private void RichTextBox1_Enter(object sender, EventArgs e)
         {
@@ -130,11 +132,12 @@ namespace GAPITranslator
             {
                 richTextBox1.Text = "";
                 richTextBox1.ForeColor = Color.Black;
+                isUserTyping = true;
             }
         }
         private void RichTextBox1_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(richTextBox1.Text))
+            if (string.IsNullOrEmpty(richTextBox1.Text) && !isUserTyping)
             {
                 richTextBox1.Text = "¬ведите текст дл€ перевода...";
                 richTextBox1.ForeColor = Color.Gray;
@@ -145,15 +148,18 @@ namespace GAPITranslator
             if (!string.IsNullOrEmpty(richTextBox1.Text))
             {
                 richTextBox1.ForeColor = Color.Black;
+                isUserTyping = true;
             }
             else
             {
                 richTextBox1.ForeColor = Color.Gray;
+                isUserTyping = false;
             }
         }
         private void RichTextBox1_Paint(object sender, PaintEventArgs e)
         {
-            if (string.IsNullOrEmpty(richTextBox1.Text))
+
+            if (string.IsNullOrEmpty(richTextBox1.Text) && !isUserTyping)
             {
                 using (Font font = new Font("Segoe UI", 12))
                 using (Brush brush = new SolidBrush(Color.FromArgb(128, 169, 169, 169)))
@@ -162,6 +168,7 @@ namespace GAPITranslator
                 }
             }
         }
+        private bool isUserTyping = false;
         private void button3_Click(object sender, EventArgs e)
         {
             comboBox1.SelectedItem = "–усский";
@@ -251,6 +258,40 @@ namespace GAPITranslator
         private void выбрать¬сЄToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             richTextBox2.SelectAll();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            richTextBox2.Clear();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Clipboard.SetText(richTextBox1.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ќшибка! ¬ы пытаетесь скопировать текст из пустого пол€.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Clipboard.SetText(richTextBox2.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ќшибка! ¬ы пытаетесь скопировать текст из пустого пол€.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

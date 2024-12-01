@@ -55,6 +55,10 @@
             contextMenuStrip2 = new ContextMenuStrip(components);
             копироватьToolStripMenuItem1 = new ToolStripMenuItem();
             выбратьВсёToolStripMenuItem1 = new ToolStripMenuItem();
+            button7 = new Button();
+            button8 = new Button();
+            button9 = new Button();
+            button10 = new Button();
             menuStrip1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
             contextMenuStrip2.SuspendLayout();
@@ -146,6 +150,7 @@
             // 
             richTextBox1.BackColor = Color.LightBlue;
             richTextBox1.ContextMenuStrip = contextMenuStrip1;
+            richTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             richTextBox1.Location = new Point(12, 70);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(414, 131);
@@ -271,6 +276,58 @@
             выбратьВсёToolStripMenuItem1.Text = "Выбрать всё";
             выбратьВсёToolStripMenuItem1.Click += выбратьВсёToolStripMenuItem1_Click;
             // 
+            // button7
+            // 
+            button7.BackColor = Color.LightBlue;
+            button7.BackgroundImage = (Image)resources.GetObject("button7.BackgroundImage");
+            button7.BackgroundImageLayout = ImageLayout.Zoom;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Location = new Point(862, 74);
+            button7.Name = "button7";
+            button7.Size = new Size(21, 22);
+            button7.TabIndex = 14;
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.LightBlue;
+            button8.BackgroundImage = (Image)resources.GetObject("button8.BackgroundImage");
+            button8.BackgroundImageLayout = ImageLayout.Zoom;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Location = new Point(384, 74);
+            button8.Name = "button8";
+            button8.Size = new Size(21, 22);
+            button8.TabIndex = 15;
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
+            // 
+            // button9
+            // 
+            button9.BackColor = Color.LightBlue;
+            button9.BackgroundImage = (Image)resources.GetObject("button9.BackgroundImage");
+            button9.BackgroundImageLayout = ImageLayout.Zoom;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Location = new Point(362, 74);
+            button9.Name = "button9";
+            button9.Size = new Size(21, 22);
+            button9.TabIndex = 16;
+            button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
+            // 
+            // button10
+            // 
+            button10.BackColor = Color.LightBlue;
+            button10.BackgroundImage = (Image)resources.GetObject("button10.BackgroundImage");
+            button10.BackgroundImageLayout = ImageLayout.Zoom;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Location = new Point(840, 74);
+            button10.Name = "button10";
+            button10.Size = new Size(21, 22);
+            button10.TabIndex = 17;
+            button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -278,6 +335,10 @@
             BackColor = SystemColors.Control;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(912, 395);
+            Controls.Add(button10);
+            Controls.Add(button9);
+            Controls.Add(button8);
+            Controls.Add(button7);
             Controls.Add(richTextBox2);
             Controls.Add(comboBox1);
             Controls.Add(comboBox2);
@@ -330,5 +391,9 @@
         private ContextMenuStrip contextMenuStrip2;
         private ToolStripMenuItem копироватьToolStripMenuItem1;
         private ToolStripMenuItem выбратьВсёToolStripMenuItem1;
+        private Button button7;
+        private Button button8;
+        private Button button9;
+        private Button button10;
     }
 }
