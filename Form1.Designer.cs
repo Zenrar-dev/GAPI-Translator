@@ -160,71 +160,78 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.LightBlue;
             button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
             button1.BackgroundImageLayout = ImageLayout.Zoom;
             button1.Location = new Point(432, 70);
             button1.Name = "button1";
             button1.Size = new Size(52, 39);
             button1.TabIndex = 4;
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
+            button2.BackColor = Color.LightBlue;
             button2.Location = new Point(819, 207);
             button2.Name = "button2";
             button2.Size = new Size(85, 29);
             button2.TabIndex = 5;
             button2.Text = "Перевести\r\n";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // button3
             // 
+            button3.BackColor = Color.LightBlue;
             button3.FlatStyle = FlatStyle.Popup;
             button3.Location = new Point(105, 27);
             button3.Name = "button3";
             button3.Size = new Size(87, 34);
             button3.TabIndex = 6;
             button3.Text = "Русский";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // button4
             // 
+            button4.BackColor = Color.LightBlue;
             button4.FlatStyle = FlatStyle.Popup;
             button4.Location = new Point(12, 27);
             button4.Name = "button4";
             button4.Size = new Size(87, 34);
             button4.TabIndex = 7;
             button4.Text = "Английский";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
             // button5
             // 
+            button5.BackColor = Color.LightBlue;
             button5.FlatStyle = FlatStyle.Popup;
             button5.Location = new Point(490, 30);
             button5.Name = "button5";
             button5.Size = new Size(85, 34);
             button5.TabIndex = 8;
             button5.Text = "Немецкий";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
             // button6
             // 
+            button6.BackColor = Color.LightBlue;
             button6.FlatStyle = FlatStyle.Popup;
             button6.Location = new Point(581, 30);
             button6.Name = "button6";
             button6.Size = new Size(85, 34);
             button6.TabIndex = 9;
             button6.Text = "Испанский";
-            button6.UseVisualStyleBackColor = true;
+            button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
             // comboBox2
             // 
+            comboBox2.BackColor = Color.LightBlue;
             comboBox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Азербайджанский", "Албанский", "Амхарский", "Английский", "Арабский", "Армянский", "Африкаанс", "Баскский", "Белорусский", "Бенгальский", "Болгарский", "Боснийский", "Валлийский", "Венгерский", "Вьетнамский", "Гаитянский креольский", "Галисийский", "Голландский", "Греческий", "Грузинский", "Гуджарати", "Датский", "Зулу", "Иврит", "Игбо", "Идиш", "Индонезийский", "Ирландский", "Исландский", "Испанский", "Итальянский", "Йоруба", "Казах", "Каннада", "Каталанский", "Киньяруанда", "Киргиз", "Корейский", "Корсиканский", "Курдский", "Кхмерский", "Лаосский", "Латинский", "Латышский", "Литовский", "Люксембургский", "Македонский", "Малагасийский", "Малайский", "Малаялам", "Мальтийский", "Маори", "Маратхи", "Монгольский", "Мьянманский (бирманский)", "Немецкий", "Непальский", "Норвежский", "Ньянджа (чичева)", "Одия (Ория)", "Панджаби", "Персидский", "Польский", "Португальский", "Пушту", "Румынский", "Русский", "Самоанский", "Сербский", "Сесото", "Сингальский", "Синдхи", "Словацкий", "Словенский", "Сомалийский", "Суахили", "Сунданский", "Тагальский", "Таджикский", "Тайский", "Тамильский", "Татарин", "Телугу", "Турецкий", "Туркменский", "Узбекский", "Уйгурский", "Украинский", "Урду", "Финский", "Французский", "Фризский", "Хауса", "Хинди", "Хорватский", "Хоса", "Чешский", "Шведский", "Шона", "Шотландский гэльский", "Эсперанто", "Эстонский", "Яванский", "Японский" });
@@ -235,6 +242,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.BackColor = Color.LightBlue;
             comboBox1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Азербайджанский", "Албанский", "Амхарский", "Английский", "Арабский", "Армянский", "Африкаанс", "Баскский", "Белорусский", "Бенгальский", "Болгарский", "Боснийский", "Валлийский", "Венгерский", "Вьетнамский", "Гаитянский креольский", "Галисийский", "Голландский", "Греческий", "Грузинский", "Гуджарати", "Датский", "Зулу", "Иврит", "Игбо", "Идиш", "Индонезийский", "Ирландский", "Исландский", "Испанский", "Итальянский", "Йоруба", "Казах", "Каннада", "Каталанский", "Киньяруанда", "Киргиз", "Корейский", "Корсиканский", "Курдский", "Кхмерский", "Лаосский", "Латинский", "Латышский", "Литовский", "Люксембургский", "Македонский", "Малагасийский", "Малайский", "Малаялам", "Мальтийский", "Маори", "Маратхи", "Монгольский", "Мьянманский (бирманский)", "Немецкий", "Непальский", "Норвежский", "Ньянджа (чичева)", "Одия (Ория)", "Панджаби", "Персидский", "Польский", "Португальский", "Пушту", "Румынский", "Русский", "Самоанский", "Сербский", "Сесото", "Сингальский", "Синдхи", "Словацкий", "Словенский", "Сомалийский", "Суахили", "Сунданский", "Тагальский", "Таджикский", "Тайский", "Тамильский", "Татарин", "Телугу", "Турецкий", "Туркменский", "Узбекский", "Уйгурский", "Украинский", "Урду", "Финский", "Французский", "Фризский", "Хауса", "Хинди", "Хорватский", "Хоса", "Чешский", "Шведский", "Шона", "Шотландский гэльский", "Эсперанто", "Эстонский", "Яванский", "Японский" });
