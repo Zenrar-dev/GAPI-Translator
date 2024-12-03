@@ -116,6 +116,12 @@ namespace GAPITranslator
                 "Ёстонский",
                 "яванский",
                 "японский" });
+            comboBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBox1.DrawItem += ComboBox1_DrawItem;
+            comboBox1.SelectedIndexChanged += ComboBox1_SelectedIndexChanged;
+            comboBox2.DrawMode = DrawMode.OwnerDrawFixed;
+            comboBox2.DrawItem += ComboBox2_DrawItem;
+            comboBox2.SelectedIndexChanged += ComboBox2_SelectedIndexChanged;
             richTextBox1.Text = "";
             richTextBox1.ForeColor = Color.Black;
             richTextBox1.Font = new Font("Segoe UI", 12);
@@ -293,6 +299,47 @@ namespace GAPITranslator
                 MessageBox.Show(ex.Message, "ќшибка! ¬ы пытаетесь скопировать текст из пустого пол€.", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void ComboBox1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (comboBox1.Items[e.Index].ToString() == "--------")
+            {
+                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds); 
+                e.Graphics.DrawLine(Pens.Gray, e.Bounds.Left, e.Bounds.Top, e.Bounds.Right, e.Bounds.Top); 
+            }
+            else
+            {
+                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds); 
+                e.Graphics.DrawString(comboBox1.Items[e.Index].ToString(), e.Font, Brushes.Black, e.Bounds); 
+            }
+        }
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem != null && comboBox1.SelectedItem.ToString() == "--------")
+            {
+                comboBox1.SelectedIndex = -1;
+            }
+        }
+        private void ComboBox2_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (comboBox2.Items[e.Index].ToString() == "--------")
+            {
+                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds); 
+                e.Graphics.DrawLine(Pens.Gray, e.Bounds.Left, e.Bounds.Top, e.Bounds.Right, e.Bounds.Top); 
+            }
+            else
+            {
+                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds); 
+                e.Graphics.DrawString(comboBox2.Items[e.Index].ToString(), e.Font, Brushes.Black, e.Bounds); 
+            }
+        }
+        private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedItem.ToString() == "--------")
+            {
+                comboBox2.SelectedIndex = -1;
+            }
+        }
     }
 }
+
 
