@@ -206,6 +206,10 @@ namespace GAPITranslator
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(richTextBox1.Text) || richTextBox1.Text == "Введите текст для перевода...")
+                {
+                    return;
+                }
                 richTextBox2.Clear();
                 string translatedText = await GoogleTranslate.TranslateAsync(comboBox1.SelectedItem.ToString(), comboBox2.SelectedItem.ToString(), richTextBox1.Text);
                 richTextBox2.Text = translatedText;
@@ -227,8 +231,12 @@ namespace GAPITranslator
 
         private async void richTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control && e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
+                if (string.IsNullOrWhiteSpace(richTextBox1.Text) || richTextBox1.Text == "Введите текст для перевода...")
+                {
+                    return;
+                }
                 try
                 {
                     richTextBox2.Clear();
@@ -280,6 +288,10 @@ namespace GAPITranslator
         {
             try
             {
+                if (richTextBox1.Text == "Введите текст для перевода...")
+                {
+                    MessageBox.Show("Ошибка! Вы пытаетесь скопировать текст из пустого поля.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 Clipboard.SetText(richTextBox1.Text);
             }
             catch (Exception ex)
@@ -303,13 +315,13 @@ namespace GAPITranslator
         {
             if (comboBox1.Items[e.Index].ToString() == "--------")
             {
-                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds); 
-                e.Graphics.DrawLine(Pens.Gray, e.Bounds.Left, e.Bounds.Top, e.Bounds.Right, e.Bounds.Top); 
+                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds);
+                e.Graphics.DrawLine(Pens.Gray, e.Bounds.Left, e.Bounds.Top, e.Bounds.Right, e.Bounds.Top);
             }
             else
             {
-                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds); 
-                e.Graphics.DrawString(comboBox1.Items[e.Index].ToString(), e.Font, Brushes.Black, e.Bounds); 
+                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds);
+                e.Graphics.DrawString(comboBox1.Items[e.Index].ToString(), e.Font, Brushes.Black, e.Bounds);
             }
         }
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -323,13 +335,13 @@ namespace GAPITranslator
         {
             if (comboBox2.Items[e.Index].ToString() == "--------")
             {
-                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds); 
-                e.Graphics.DrawLine(Pens.Gray, e.Bounds.Left, e.Bounds.Top, e.Bounds.Right, e.Bounds.Top); 
+                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds);
+                e.Graphics.DrawLine(Pens.Gray, e.Bounds.Left, e.Bounds.Top, e.Bounds.Right, e.Bounds.Top);
             }
             else
             {
-                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds); 
-                e.Graphics.DrawString(comboBox2.Items[e.Index].ToString(), e.Font, Brushes.Black, e.Bounds); 
+                e.Graphics.FillRectangle(Brushes.LightBlue, e.Bounds);
+                e.Graphics.DrawString(comboBox2.Items[e.Index].ToString(), e.Font, Brushes.Black, e.Bounds);
             }
         }
         private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
